@@ -1,0 +1,76 @@
+# Project: ThiTracNghiem
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = MyFunction.o Main.o MonHoc.o DSLop.o DSMonHoc.o DSSinhVien.o Lop.o SinhVien.o Diem.o DSDiemThi.o CauHoi.o DSCauHoi.o ChiTietDeThi.o Display.o Global.o Th_Clock.o DangNhap.o
+LINKOBJ  = MyFunction.o Main.o MonHoc.o DSLop.o DSMonHoc.o DSSinhVien.o Lop.o SinhVien.o Diem.o DSDiemThi.o CauHoi.o DSCauHoi.o ChiTietDeThi.o Display.o Global.o Th_Clock.o DangNhap.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ThiTracNghiem.exe
+CXXFLAGS = $(CXXINCS) -std=c++11
+CFLAGS   = $(INCS) -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+MyFunction.o: MyFunction.cpp
+	$(CPP) -c MyFunction.cpp -o MyFunction.o $(CXXFLAGS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+MonHoc.o: MonHoc.cpp
+	$(CPP) -c MonHoc.cpp -o MonHoc.o $(CXXFLAGS)
+
+DSLop.o: DSLop.cpp
+	$(CPP) -c DSLop.cpp -o DSLop.o $(CXXFLAGS)
+
+DSMonHoc.o: DSMonHoc.cpp
+	$(CPP) -c DSMonHoc.cpp -o DSMonHoc.o $(CXXFLAGS)
+
+DSSinhVien.o: DSSinhVien.cpp
+	$(CPP) -c DSSinhVien.cpp -o DSSinhVien.o $(CXXFLAGS)
+
+Lop.o: Lop.cpp
+	$(CPP) -c Lop.cpp -o Lop.o $(CXXFLAGS)
+
+SinhVien.o: SinhVien.cpp
+	$(CPP) -c SinhVien.cpp -o SinhVien.o $(CXXFLAGS)
+
+Diem.o: Diem.cpp
+	$(CPP) -c Diem.cpp -o Diem.o $(CXXFLAGS)
+
+DSDiemThi.o: DSDiemThi.cpp
+	$(CPP) -c DSDiemThi.cpp -o DSDiemThi.o $(CXXFLAGS)
+
+CauHoi.o: CauHoi.cpp
+	$(CPP) -c CauHoi.cpp -o CauHoi.o $(CXXFLAGS)
+
+DSCauHoi.o: DSCauHoi.cpp
+	$(CPP) -c DSCauHoi.cpp -o DSCauHoi.o $(CXXFLAGS)
+
+ChiTietDeThi.o: ChiTietDeThi.cpp
+	$(CPP) -c ChiTietDeThi.cpp -o ChiTietDeThi.o $(CXXFLAGS)
+
+Display.o: Display.cpp
+	$(CPP) -c Display.cpp -o Display.o $(CXXFLAGS)
+
+Global.o: Global.cpp
+	$(CPP) -c Global.cpp -o Global.o $(CXXFLAGS)
+
+Th_Clock.o: Th_Clock.cpp
+	$(CPP) -c Th_Clock.cpp -o Th_Clock.o $(CXXFLAGS)
+
+DangNhap.o: DangNhap.cpp
+	$(CPP) -c DangNhap.cpp -o DangNhap.o $(CXXFLAGS)
